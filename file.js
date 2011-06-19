@@ -1,9 +1,11 @@
+//Load the modules
 var sys = require("sys"),
 	http = require("http"),
 	url = require("url"),
 	path = require("path"),
 	fs = require("fs");
-	
+
+//Create the server	
 http.createServer(function(request, response) {
 	var uri = url.parse(request.url).pathname;
 	var filename = path.join(process.cwd(), uri);
